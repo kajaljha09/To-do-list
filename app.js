@@ -48,6 +48,10 @@ app.post("/delete", function (req, res) {
     res.redirect("/")
      
 });
-app.listen(3000, function (req, res) {
-    console.log("server is working at port 3000")
+let port = process.env.PORT;
+if (port==null || port==""){
+    port=3000
+}
+app.listen(port, function (req, res) {
+    console.log("server is working ")
 });

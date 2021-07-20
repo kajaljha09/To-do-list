@@ -8,6 +8,9 @@
   },
   "author": "kajaljha",
   "license": "ISC",
+  "engines": {
+    "node": "16.4.0"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
