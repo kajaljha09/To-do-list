@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const encrypt =require("mongoose-encryption");
 const app = express();
 
-mongoose.connect(process.env.KJ, { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 const itemSchema = new mongoose.Schema({
     name: String
