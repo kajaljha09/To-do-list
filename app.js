@@ -18,10 +18,10 @@ app.use(express.urlencoded({ extended: true }));  //this is to use body parser
 app.use(express.static("public"));
 //this is to use the css file in our websites
 app.set("view engine", "ejs");   //it is important to create view file and there we could write all our ejs files
-app.get("/", function (request, response) {  // it is the routing part basically the home
+app.get("/", function (request, response) {  
     var today = new Date();   //date is builtin js function to get the date time 
     var daynum = today.getDay();
-    var options = { weekday: 'long', day: 'numeric', month: 'long', }; //options is js object with key value paired 
+    var options = { weekday: 'long', day: 'numeric', month: 'long', }; 
     var day = today.toLocaleDateString("en-US", options);
     Item.find({}, function (err, items) {
 
